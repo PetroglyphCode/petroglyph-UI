@@ -1,0 +1,209 @@
+@tailwind base;
+
+
+@font-face {
+  font-family: 'Zilla Slab';
+  font-weight: 400; 
+  src: url(../fonts/zilla-slab/ZillaSlab-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 400;
+  font-style:italic;
+  src: url('../fonts/zilla-slab/ZillaSlab-RegularItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 500;
+  src: url("../fonts/zilla-slab/ZillaSlab-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 600;
+  src: url("../fonts/zilla-slab/ZillaSlab-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 700;
+  src: url("../fonts/zilla-slab/ZillaSlab-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 700;
+  font-style:italic;
+  src: url("../fonts/zilla-slab/ZillaSlab-BoldItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 400;
+  src: url("../fonts/libre-franklin/librefranklin-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 400;
+  font-style:italic;
+  src: url("../fonts/libre-franklin/librefranklin-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 700;
+  src: url("../fonts/libre-franklin/librefranklin-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 700;
+  font-style:italic;
+  src: url("../fonts/libre-franklin/librefranklin-bolditalic.ttf") format("truetype");
+}
+
+@tailwind components;
+
+@tailwind utilities;
+a{ @apply text-blue-700 font-medium border-b-2 border-yellow-300;}
+hr {border-width:0;}
+
+th{
+  @apply bg-gray-100 text-gray-300 font-bold py-2  text-left;
+}
+.text-tiny {
+	font-size:12px;
+	line-height:16px;
+	@apply font-body;
+}
+.text-small{
+	font-size:14px;
+	line-height:24px;
+	@apply font-body;
+}
+.text-large{
+	font-size:18px;
+	line-height:32px;
+	@apply font-body;
+}
+.heading-xs{
+	font-size:21px;
+	line-height:32px;
+	font-weight:700;
+	@apply font-display;
+}
+.heading-s{
+	font-size:24px;
+	line-height:40px;
+	font-weight:700;
+	@apply font-display;
+}
+.heading{
+	font-size:28px;
+	line-height:48px;
+	font-weight:700;
+	@apply font-display;
+}
+.heading-m{
+	font-size:32px;
+	line-height:56px;
+	font-weight:700;
+	@apply font-display;
+}
+.heading-l{
+	font-size:36px;
+	line-height:64px;
+	font-weight:700;
+	@apply font-display;
+}
+.heading-xl{
+	font-size:48px;
+	line-height:72px;
+	font-weight:700;
+	@apply font-display;
+}
+.heading-d{
+	font-size:60px;
+	line-height:80px;
+	font-weight:400;
+	@apply font-display;
+}
+.heading-dxl{
+	font-size:72px;
+	line-height:96px;
+	font-weight:400;
+	@apply font-display;
+}
+button{
+	 @apply font-bold py-2 px-4 rounded bg-green-500 text-white;
+}
+button:hover{
+	@apply bg-green-800;
+}
+button.btn-lg{
+	@apply py-4 px-10 text-large;
+}
+.error-msg{
+	@apply text-red-500 text-xs italic
+}
+label{
+	@apply font-bold;
+}
+input[type='text'], textarea {
+	@apply shadow bg-gray-100 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+}
+input[type='text']:focus, textarea:focus{
+	@apply outline-none shadow-outline;
+}
+input[type='checkbox']{
+	@apply text-blue-800 bg-red-800;
+}
+input.error {
+	@apply shadow appearance-none border border-red-500 bg-red-100 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight;
+}
+select{
+	@apply block appearance-none w-full   border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight;
+}
+select:focus{
+ @apply   outline-none shadow-outline bg-white border-green-700;
+}
+select.error {
+	@apply shadow appearance-none border border-red-500 bg-red-100 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight;
+}
+::selection {
+  background: #F7C5A4; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #F7C5A4; /* Gecko Browsers */
+}
+figcaption {
+	@apply text-small italic text-gray-700 p-2;
+}
+p.short{max-width:39px; min-width:35px;}
+p.compliant{max-width:50px; min-width:40px;}
+p.optimal{max-width:90px; min-width:51px;}
+p.toobig{ min-width:91px;}
+.card {
+	@apply max-w-sm rounded overflow-hidden shadow-lg;
+}
+.card img {
+	@apply w-full;
+}
+a .card h3, a .card h4 {
+	@apply text-orange-600 font-display text-2xl font-bold;
+}
+a .card p{
+	@apply text-gray-700;
+}
+.card.dark{
+	@apply text-white bg-gray-800;
+}
+a .card.dark p{
+	@apply text-white;
+}
+a .card.dark h3, a .card.dark h4 {
+	@apply text-orange-600;
+}
+blockquote {
+	@apply text-2xl border-l-4 border-green-200 text-gray-600 p-6 my-6 ;
+}
+blockquote footer{
+	@apply text-small italic text-gray-500  mt-4 mb-2;
+}
+blockquote footer a{
+ @apply not-italic;	
+}
