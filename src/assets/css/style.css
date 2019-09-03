@@ -38,11 +38,34 @@
   font-weight: 400;
   src: url("../fonts/libre-franklin/librefranklin-regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Libre Franklin";
   font-weight: 400;
   font-style:italic;
   src: url("../fonts/libre-franklin/librefranklin-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 500;
+  src: url("../fonts/libre-franklin/librefranklin-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 500;
+  font-style:italic;
+  src: url("../fonts/libre-franklin/librefranklin-mediumitalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 600;
+  src: url("../fonts/libre-franklin/librefranklin-semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libre Franklin";
+  font-weight: 600;
+  font-style:italic;
+  src: url("../fonts/libre-franklin/librefranklin-semibolditalic.ttf") format("truetype");
 }
 @font-face {
   font-family: "Libre Franklin";
@@ -59,7 +82,7 @@
 @tailwind components;
 
 @tailwind utilities;
-a{ @apply text-blue-700 font-medium border-b-2 border-yellow-300;}
+a{ @apply text-blue-700 font-semibold border-b-2 border-yellow-400;}
 hr {border-width:0;}
 
 th{
@@ -187,7 +210,7 @@ a .card h3, a .card h4 {
 	@apply text-orange-600 font-display text-2xl font-bold;
 }
 a .card p{
-	@apply text-gray-700;
+	@apply text-gray-700 ;
 }
 .card.dark{
 	@apply text-white bg-gray-800;
@@ -196,7 +219,7 @@ a .card.dark p{
 	@apply text-white;
 }
 a .card.dark h3, a .card.dark h4 {
-	@apply text-orange-600;
+	@apply text-orange-500;
 }
 blockquote {
 	@apply text-2xl border-l-4 border-green-200 text-gray-600 p-6 my-6 ;
