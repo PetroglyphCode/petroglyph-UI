@@ -78,7 +78,7 @@
   font-style:italic;
   src: url("../fonts/libre-franklin/librefranklin-bolditalic.ttf") format("truetype");
 }
-
+@import url("customwebfonts.css"); /* Using a url */
 @tailwind components;
 
 @tailwind utilities;
@@ -98,6 +98,11 @@ th{
 	line-height:24px;
 	@apply font-body;
 }
+.text-normal{
+	font-size:14px;
+	line-height:24px;
+	@apply font-body;
+}
 .text-large{
 	font-size:18px;
 	line-height:32px;
@@ -106,25 +111,25 @@ th{
 .heading-xs{
 	font-size:21px;
 	line-height:32px;
-	font-weight:700;
+	font-weight:300;
 	@apply font-display;
 }
 .heading-s{
 	font-size:24px;
 	line-height:40px;
-	font-weight:700;
+	font-weight:400;
 	@apply font-display;
 }
 .heading{
 	font-size:28px;
 	line-height:48px;
-	font-weight:700;
+	font-weight:500;
 	@apply font-display;
 }
 .heading-m{
 	font-size:32px;
 	line-height:56px;
-	font-weight:700;
+	font-weight:600;
 	@apply font-display;
 }
 .heading-l{
@@ -136,13 +141,13 @@ th{
 .heading-xl{
 	font-size:48px;
 	line-height:72px;
-	font-weight:700;
+	font-weight:800;
 	@apply font-display;
 }
 .heading-d{
 	font-size:60px;
 	line-height:80px;
-	font-weight:400;
+	font-weight:500;
 	@apply font-display;
 }
 .heading-dxl{
@@ -230,3 +235,73 @@ blockquote footer{
 blockquote footer a{
  @apply not-italic;	
 }
+header.top{
+	
+}
+header .menu{
+	display:none;
+}
+header .menu a{
+	
+	@apply font-medium text-large block px-3 py-2 inline-block mt-0  text-blue-700 border-white  mr-4 border-b-4 text-center;
+	display:block;
+}
+header .menu a:hover, header .menu a:active{
+	@apply bg-orange-100;
+}
+.menu-toggle {
+  display: inline-block;
+  cursor: pointer;
+  float:right;
+  @apply border rounded px-2 py-1;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 4px;
+  margin: 6px 0;
+  transition: 0.4s;
+  @apply bg-gray-500 ;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+@media (min-width: 640px) {
+	header .menu{
+		display:block;
+	}
+
+  	header .menu a{ 
+	  display:inline;
+	  }
+	header .menu a.button{
+	@apply font-body text-normal font-semibold py-2 px-4 border-2 border-yellow-500 inline-block text-sm leading-none border rounded text-blue-700 ;
+	
+	}
+	header .menu a.button:hover{
+		@apply bg-yellow-100 text-blue-900 bg-yellow-100;
+	}
+	header .menu a:hover {
+		 @apply text-blue-600 border-yellow-500 ; 
+	}
+	.menu-toggle{
+		display:none;
+	}
+}
+
+
+.petroglyph{
+	@apply font-display text-3xl  text-green-500 font-semibold;
+	}
+.petroglyph .creative{
+	@apply  text-orange-500 font-light;
+	}

@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
 	fontFamily: {
-      'display': 'Zilla Slab, serif',
+      'display': 'FFMeta, Zilla Slab, serif',
       'body': ['"Libre Franklin"', 'sans-serif'],
     },
     boxShadow: {

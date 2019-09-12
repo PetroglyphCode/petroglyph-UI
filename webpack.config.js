@@ -1,6 +1,7 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: {
@@ -9,8 +10,17 @@ module.exports = {
 	  
   },
   mode: process.env.NODE_ENV,
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+    }
+  },
   module: {
     rules: [
+	    {
+	        test: /\.vue$/,
+	        use: 'vue-loader'
+	      },
 	    {
          test: /\.(woff|woff2|eot|ttf|otf)$/,
          use:[{
@@ -56,6 +66,7 @@ module.exports = {
 	    filename: 'index.html',
       template: 'src/index.html'
     }),
+    new VueLoaderPlugin()
   ],
   output: {
 	  filename:'[name].js',
