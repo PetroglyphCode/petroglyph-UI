@@ -200,6 +200,24 @@ p.short{max-width:39px; min-width:35px;}
 p.compliant{max-width:50px; min-width:40px;}
 p.optimal{max-width:90px; min-width:51px;}
 p.toobig{ min-width:91px;}
+.read {@apply ml-auto mr-auto;}
+.read p {
+ @apply  max-w-2xl mr-auto ml-auto my-4 text-large;
+}
+.read h1 {@apply heading-dxl text-orange-600}
+.read h2 {@apply heading-l text-green-500 my-8;}
+.read.home h2 {@apply text-orange-500;}
+.read h3{@apply heading-m text-gray-400 my-8;}
+.read h4 {@apply heading-s text-gray-700  my-8;}
+.read h5 {@apply heading-xs text-gray-700  my-8;}
+.read figure { @apply ml-auto mr-auto my-8;}
+.read ul {
+   @apply  max-w-xl mr-auto ml-auto my-4 text-large leading-snug list-disc ;
+   max-width:620px;
+}
+.read blockquote p{
+  max-width:none;
+}
 .card {
 	@apply max-w-sm rounded overflow-hidden shadow-lg;
 }
