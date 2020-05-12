@@ -2,7 +2,7 @@
 A super-sweet starter UI kit for Petroglyph Creative websites, including our own.
 
 ## Installation
-`npm install` does pretty much everything. There may be some dependencies that you must install separately.
+`npm install  --save-dev` does pretty much everything. There may be some dependencies that you must install separately.
 
 ## Use
 
