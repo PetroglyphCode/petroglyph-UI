@@ -2,33 +2,104 @@
 <html>
   <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Petroglyph UI Kit by Aquarian Web Studio</title>
-    <meta name="description" content="A live code set demonstrating UI elements for Petroglyph Creative built from WebPack and Tailwind CSS. Free to use and download.">
+    <meta name="description" content="A UI kit for Aquarian Web Studio built from WebPack and Tailwind CSS. Free to use and download.">
     <link rel="canonical" href="https://www.aquarianwebdesign.com/ui/" />
   </head>
 
   <body>
-	<header>
-		<nav class="flex items-center justify-between flex-wrap bg-orange-400 p-6">
-		  <div class="w-full flex-grow flex lg:items-center w-auto">
-		    <div class="text-sm flex-grow">
-		      <a href="https://www.petroglyphcreative.com" class="block mt-4 inline-block mt-0 text-white text-bold hover:text-white hover:border-blue-600 mr-4">
-		        Petroglyph UI
-		      </a>
-		      <a href="https://www.petroglyphcreative.com#contact" class="block mt-4 inline-block mt-0 text-white text-bold hover:text-white mr-4 hover:border-blue-600">
-		        Hire
-		      </a>
-		      <a href="https://www.petroglyphcreative.com/blog" class="block mt-4 inline-block mt-0 text-white text-bold hover:text-white hover:border-blue-600">
-		        Blog
-		      </a>
-		    </div>
-		    <div>
-		      <a href="https://github.com/carolinecblaker/petroglyph-UI" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-orange-100 hover:text-gray-100 hover:bg-orange-200 mt-4 lg:mt-0">Github</a>
-		    </div>
-		  </div>
-		</nav>
+	<a class="skip-main" href="#main">Skip to main content</a><!-- basic accessibility feature. Move '#main' to your content's container-->
+	<header class="lg:px-2 px-1 bg-orange-700 flex flex-wrap items-center py-3 " id='pagehead'>
+			<div class="container ml-auto mr-auto px-2 md:max-w-full">
+					<nav class=" border-b-2 border-orange-500   block pt-2">
+						<ul class="block md:flex md:flex-wrap xl:flex-no-wrap  xl:items-stretch xl:justify-between ">
+							<li class=' flex text-center md:text-left md:w-1/2 xl:w-1/3   justify-between' >
+							<a href="/">Petroglyph UI</a>
+			
+								<a class="menu-toggle md:hidden  align-top h-12" id='mobileMenuToggle' v-on:click="openMobileMenuContainer"  v-bind:class="{ 'change': m_showing}">
+								  <div class="bar1"></div>
+								  <div class="bar2"></div>
+								  <div class="bar3"></div>
+								</a>
+							  </li>
+							<li class=" primary_nav  md:flex md:order-last md:justify-center md:w-full lg:w-auto lg:order-none lg:ml-auto lg:mr-auto  xl:mr-0 border-box items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
+							<button class="text-gray-100 mr-auto ml-auto  text-2xl  px-12 py-3 hover:text-gray-700 hover:bg-gray-100  md:text-base lg:text-lg md:px-3 lg:px-6 md:py-1 font-medium block md:flex  md:m-0 " v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' data-menutitle='Petroglyph UI Features' name='Page Features'>UI Kit Features<span class="text-red-400 ml-1">&#9660;</span></button>
+								
+							<div class='p-4  vertical-menu' data-nav='menu-one' data-menu-place='left' v-bind:style="{ display: display.one }">
+									<ul class="subnav left" >
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#typography">Typography</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#color">Color Palette</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#text">Text Display</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#uicomponents">UI Components</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#cards">Cards</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#">Adding features? Add them here</a></li>
+
+									</ul>
+								</div>
+								<div class=' vertical-menu' data-nav='menu-one' data-menu-place='right' v-bind:style="{ display: display.one }">
+									<h4 class='text-center md:text-left md:text-xl text-white md:text-gray-300 md:font-semibold md:font-display md:mb-4'>Off-page features</h4>
+									<ul class="" >
+										<li class="my-2">Skip To Main Content for accessibility</li>
+										<li class="my-2">Mobile-first, Vue-driven  navigation</li>
+										<li class="my-2">ExpressionEngine and Craft CMS ready</li>
+										<li class="my-2">Color palette built into Tailwind CSS</li>
+									
+									</ul>
+								</div>
+								<button class="text-gray-100 hover:text-gray-700 hover:bg-gray-100  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6 py-3 md:py-1 font-medium block md:flex mr-auto ml-auto md:m-0" v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' data-menutitle='For Producers' name="About Aquarian Web Studio">About Aquarian Web Studio<span class="text-red-400 ml-1">&#9660;</span></button>
+								<div class='p-4 vertical-menu' data-nav='menu-two' data-menu-place='left' v-bind:style="{ display: display.two }">
+									<ul class="subnav left">
+									
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900 hover:text-underline" href="#">Item 2 title</a></li>
+									
+									</ul>
+								</div>
+								<div  data-nav='menu-two' data-menu-place='right' v-bind:style="{ display: display.two }" class="subnav right ">     
+									
+								</div>
+								<button class="text-gray-100 hover:text-gray-700 hover:bg-gray-100  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6  py-3  md:py-1 font-medium block md:flex mr-auto ml-auto md:m-0"  v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-three' data-menutitle='Food Service &amp; Retail'>Demo Menu <span class="text-red-400 ml-1">&#9660;</span></button>
+								<div class='p-4 vertical-menu' data-nav='menu-three' data-menu-place='left' v-bind:style="{ display: display.three }">
+									<ul class="subnav left">
+										
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#">Item 3 title</a></li>
+									
+									</ul>
+								</div>
+								<div class="p-4 vertical-menu" data-nav='menu-three' data-menu-place='right' v-bind:style="{ display: display.three }">
+									<div class="subnav right ">
+										
+									</div>
+								</div>
+								
+								<a href="https://github.com/PetroglyphCode/petroglyph-UI" class="text-gray-100 hover:text-gray-700 px-4 py-3 md:py-1  rounded text-gray-100 hover:border-blue-600 block  hover:bg-gray-100 ml-auto mr-auto md:mr-0 md:ml-0 md:flex font-medium  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6  text-center">GitHub</a>
+								
+							</li>
+							<li class="secondary_nav  md:flex md:justify-end md:w-1/2 lg:w-auto items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
+							
+								
+							</li>
+						</ul>
+						<!--<dropdown-holder></dropdown-holder>-->
+						<div class="dropdown-holder relative border-1 bg-gray-200 w-full block z-20" id="menuroot" >
+							<div class="dropdown-point"></div>
+								<div class="dropdown-box border-2 border-gray-400 p-4 bg-gray-100 " id='menubox' style='' v-on:mouseout='hideboard' v-on:mouseover="hoverboard" v-bind:style="{ left: menu_lpos + 'px', display: menudisplay }" v-bind:class="menu.name">
+									<h4 class='font-display text-semibold text-blue-500 text-2xl block align-left w-full mb-4 '><!--{% verbatim %}-->{{menu.title}}<!--{% endverbatim %}--></h4>
+									
+									<div class='header w-full' id='menuheader' v-html='menu.header'></div>
+									<div class="w-full flex">
+									<div class='menu-left w-1/2' id='menuleft' v-html='menu.left'></div>
+									<div class='menu-right w-1/2' id='menuright' v-html='menu.right'></div>
+									</div>
+									<div class='footer w-full' id='menufooter' v-html='menu.footer'></div>
+									
+							</div>
+						</div>
+					</div> 
+				</nav>
+			</div>
 	</header>
-	<div class="flex mb-4">
+	<div class="flex mb-4" id='main'>
 		<div class="w-full  ">
 		<h1 class='font-display text-3xl text-center text-gray-700 font-semibold mt-5 mb-5'>Petroglyph UI Kit</h1>
 		</div>
@@ -192,33 +263,7 @@
 			</div>
 			<div class="w-1/2">
 				<p class="mt-10">Studies show that different aspects of reading performance such as comprehension, reading speed, method of movement, and eye movements are affected by changes in line length. </p>
-        <div class="w-3/4 ml-auto mr-auto article-body mt-8">
-        			<h2 class='heading-xs text-blue-600'>Make a selection</h2>
-        			<p>What would you like for lunch? </p>
-        			<div class="ml-auto mr-auto  m-3 max-w-2xl drawer">
-        				<button class="text-gray-600 bg-gray-200 hover:text-gray-700 hover:bg-gray-100  text-lg  px-10 py-3 font-medium block mr-auto ml-auto inline-flex items-center"  v-on:click="toggledrawer"><span class="mr-4">Choose a menu item</span>
-        					<svg class="fill-current h-4 w-4" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-        						<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-        					</svg>
-        				</button>
-        				<div class="p-4 w-full ml-auto mr-auto ">
-        					<!--		drop down START-->
-        					<div class="inner-dropdown border-box items-center" v-bind:class="{'block': d_showing, 'hidden': !d_showing}">
-
-        						<div class='p-2 vertical-menu'>
-        							<ul class="">
-        								<li class='py-2 '><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>Greens n cheese, whatever</a></li>
-        								<li class='py-2 '><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>A giant roast beef sandwich</a></li>
-        							  <li class='py-2 '><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>Pizza. Like you have to ask.</a></li>
-        								<li class='py-2'><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>Soup in a Breadbowl</a></li>
-        							</ul>
-        						</div>
-        					</div>
-        					<!-- END drop down -->
-        				</div>
-        			</div>
-        		</div>
-        		<!--		Find a support group end-->
+        		
 
         <div id = 'linelength'>
 				<!-- SUPER COOL FEATURE HERE - VUE.JS pixel generated in-html graph
@@ -367,10 +412,10 @@
         <div class="w-full md:w-1/3">
           <h4 class="font-display text-xl  m-1 font-semibold"> Code Tools</h4>
           <ul class="m-3">
-						 <li class='my-2 leading-tight'>Foundation Sites </li>
-						 <li class='my-2 leading-tight'>Gulp Compiled front-end</li>
-						 <li class='my-2 leading-tight'>Responsive CSS 3, HTML5, JS</li>
-					</ul>
+				<li class='my-2 leading-tight'>Foundation Sites </li>
+				<li class='my-2 leading-tight'>Gulp Compiled front-end</li>
+				<li class='my-2 leading-tight'>Responsive CSS 3, HTML5, JS</li>
+			</ul>
          </div>
         <div class="w-full md:w-1/3">
           <h4 class="font-display text-xl  m-1 font-semibold">Build Tools</h4>
@@ -455,7 +500,7 @@
 
 	</div>
 			<div class="flex mb4">
-				<div class="mb-4 w-1/2 md:w-1/3  p-6">
+				<div class="mb-4 w-1/2 md:w-1/3 lg:w-1/4  p-6">
 			      <h4 class='font-display heading-xs text-green-600'>Checkboxes</h4>
 			      <div>
 				  	<input type="checkbox" id="webdesign" name="webdesign" checked>
@@ -466,7 +511,7 @@
 				  <label for="sardines" class='font-normal'>Sardine Ice Cream</label>
 				</div>
 			    </div>
-			    <div class="mb-4 w-1/2 md:w-1/3  p-6">
+			    <div class="mb-4 w-1/2 md:w-1/3 lg:w-1/4  p-6">
 			      <h4 class='font-display heading-xs text-green-600'>Radio buttons</h4>
 				  <div>
 					 <input type="radio" id="contactChoice1" name="contact" value="email">
@@ -477,9 +522,34 @@
 					    <label for="contactChoice2" class='font-normal'>Phone</label>
 				  </div>
 			    </div>
-			    <div  class="p-6">
-			    <h4 class='font-display heading-xs text-green-600'>Unstyled</h4>
-			    <p >No way am I styling those things. Have you <a href="https://www.w3schools.com/howto/howto_css_custom_checkbox.asp" title="the ridiculous hoops to changing the color of checkboxes" target="_blank">read about what it takes just to change their color</a>? Psh. You have to hide the <i>actual</i> element and reproduce a styled shape that looks just like this but a different color. The whole thing just feels dishonest.</p>
+			    <div  class="w-full lg:w-1/2p-6">
+					<div class="w-3/4 ml-auto mr-auto article-body mt-8">
+						<h2 class='heading-xs text-blue-600'>Make a selection</h2>
+						<p>What would you like for lunch? </p>
+						<div class="ml-auto mr-auto  m-3 max-w-2xl drawer">
+							<button class="text-gray-600 bg-gray-200 hover:text-gray-700 hover:bg-gray-100  text-lg  px-10 py-3 font-medium block mr-auto ml-auto inline-flex items-center"  v-on:click="toggledrawer"><span class="mr-4">Choose a menu item</span>
+								<svg class="fill-current h-4 w-4" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+								</svg>
+							</button>
+							<div class="p-4 w-full ml-auto mr-auto ">
+								<!--		drop down START-->
+								<div class="inner-dropdown border-box items-center" v-bind:class="{'block': d_showing, 'hidden': !d_showing}">
+	
+									<div class='p-2 vertical-menu'>
+										<ul class="">
+											<li class='py-2 '><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>Greens n cheese, whatever</a></li>
+											<li class='py-2 '><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>A giant roast beef sandwich</a></li>
+										  <li class='py-2 '><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>Pizza. Like you have to ask.</a></li>
+											<li class='py-2'><a href="#" class='my-1 text-gray-600 hover:text-black border-0'>Soup in a Breadbowl</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- END drop down -->
+							</div>
+						</div>
+					</div>
+					<!--		Find a support group end-->
 			    </div>
 	    	</div>
 		</div>
@@ -520,7 +590,7 @@
 		<div class="w-full lg:w-2/3  font-body mb-12">
 			<div class="md:flex mb-8">
 				<div class="flex-grab ml-auto mr-auto">
-				<a href="https://www.petroglyphcreative.com">
+				<a href="https://www.aquarianwebdesign.com">
 				<div class=" card ml-4 mr-4">
 				  <img class="" src="./assets/img/sometimes_800.jpg" alt="Image">
 				  <div class="px-6 py-4">
