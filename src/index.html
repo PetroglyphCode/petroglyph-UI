@@ -24,14 +24,15 @@
 								</a>
 							  </li>
 							<li class=" primary_nav  md:flex md:order-last md:justify-center md:w-full lg:w-auto lg:order-none lg:ml-auto lg:mr-auto  xl:mr-0 border-box items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
-							<button class="text-gray-100 mr-auto ml-auto  text-2xl  px-12 py-3 hover:text-gray-700 hover:bg-gray-100  md:text-base lg:text-lg md:px-3 lg:px-6 md:py-1 font-medium block md:flex  md:m-0 " v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' data-menutitle='Petroglyph UI Features' name='Page Features'>UI Kit Features<span class="text-red-400 ml-1">&#9660;</span></button>
+							<button class="text-gray-100 mr-auto ml-auto  text-2xl  px-12 py-3 hover:text-gray-700 hover:bg-gray-100  md:text-base lg:text-lg md:px-3 lg:px-6 md:py-1 font-medium block md:flex  md:m-0 " v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-one' data-menutitle='Petroglyph UI Features' name='Page Features'>UI Kit Features<span class="text-orange-200 ml-1">&#9660;</span></button>
 								
 							<div class='p-4  vertical-menu' data-nav='menu-one' data-menu-place='left' v-bind:style="{ display: display.one }">
 									<ul class="subnav left" >
 										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#typography">Typography</a></li>
-										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#color">Color Palette</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#colors">Color Palette</a></li>
 										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#text">Text Display</a></li>
 										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#uicomponents">UI Components</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#images">Images</a></li>
 										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#cards">Cards</a></li>
 										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#">Adding features? Add them here</a></li>
 
@@ -47,36 +48,53 @@
 									
 									</ul>
 								</div>
-								<button class="text-gray-100 hover:text-gray-700 hover:bg-gray-100  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6 py-3 md:py-1 font-medium block md:flex mr-auto ml-auto md:m-0" v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' data-menutitle='For Producers' name="About Aquarian Web Studio">About Aquarian Web Studio<span class="text-red-400 ml-1">&#9660;</span></button>
+								<button class="text-gray-100 hover:text-gray-700 hover:bg-gray-100  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6 py-3 md:py-1 font-medium block md:flex mr-auto ml-auto md:m-0" v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-two' data-menutitle='Aquarian Web Studio' name="About Aquarian Web Studio">About Aquarian Web Studio<span class="text-orange-200 ml-1">&#9660;</span></button>
 								<div class='p-4 vertical-menu' data-nav='menu-two' data-menu-place='left' v-bind:style="{ display: display.two }">
 									<ul class="subnav left">
 									
-										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900 hover:text-underline" href="#">Item 2 title</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900 hover:text-underline" href="https://www.aquarianwebdesign.com/web-design-development-services/website-design-and-development">Web Design</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900 hover:text-underline" href="https://www.aquarianwebdesign.com/web-design-development-services/expressionengine-web-development">Web Development</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900 hover:text-underline" href="https://www.aquarianwebdesign.com/web-design-development-services/wordpress-rescue">WordPress Rescue</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900 hover:text-underline" href="https://www.aquarianwebdesign.com/web-design-development-services/content-strategy-seo">Content Strategy</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900 hover:text-underline" href="https://www.aquarianwebdesign.com/web-design-development-services/social-media-marketing">Social Media</a></li>
 									
 									</ul>
 								</div>
 								<div  data-nav='menu-two' data-menu-place='right' v-bind:style="{ display: display.two }" class="subnav right ">     
-									
+									<h4 class='text-center md:text-left md:text-xl text-white md:text-gray-300 font-semibold font-display md:mb-4'>Nice to meet you</h4>
+									<p class="block p-3 text-center md:text-left text-white md:text-gray-600 ">We are a women-led one-stop agency for the care of successful websites. We are high-touch and care deeply about our work. We put this together as a starting place for all of our websites.</p>
 								</div>
-								<button class="text-gray-100 hover:text-gray-700 hover:bg-gray-100  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6  py-3  md:py-1 font-medium block md:flex mr-auto ml-auto md:m-0"  v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-three' data-menutitle='Food Service &amp; Retail'>Demo Menu <span class="text-red-400 ml-1">&#9660;</span></button>
-								<div class='p-4 vertical-menu' data-nav='menu-three' data-menu-place='left' v-bind:style="{ display: display.three }">
-									<ul class="subnav left">
+								<button class="text-gray-100 hover:text-gray-700 hover:bg-gray-100  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6  py-3  md:py-1 font-medium block md:flex mr-auto ml-auto md:m-0"  v-on:mouseover="hovermenu" v-on:click="togglemenu" v-on:mouseout='hideboard' data-menu='menu-three' data-menutitle='Demo Menu'>Demo Menu <span class="text-orange-200 ml-1">&#9660;</span></button>
+								<div class="p-4 vertical-menu " data-nav='menu-three' data-menu-place='header' v-bind:style="{ display: display.three }">
+									<div class= 'md:flex md:w-full md:bg-orange-200 md:p-2'>
+									<p class="block p-3 text-center md:text-left text-white md:text-gray-600 ">There's space for some text up here in the header</p>
+									</div>
+								</div>
+								<div class='p-4 vertical-menu ' data-nav='menu-three' data-menu-place='left' v-bind:style="{ display: display.three }">
+									<ul class="subnav left md:bg-red-200 md:p-2">
 										
-										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 hover:text-blue-900" href="#">Item 3 title</a></li>
+										<li><a class="block p-3 text-center md:text-left text-white md:text-gray-600 " href="#">Left on desktop, top on mobile</a></li>
 									
 									</ul>
 								</div>
-								<div class="p-4 vertical-menu" data-nav='menu-three' data-menu-place='right' v-bind:style="{ display: display.three }">
-									<div class="subnav right ">
-										
+								<div class="p-4 vertical-menu " data-nav='menu-three' data-menu-place='right' v-bind:style="{ display: display.three }">
+									<div class="subnav right md:bg-blue-200 md:p-2">
+										<p class="block p-3 text-center md:text-left text-white md:text-gray-600 ">Right-hand side navigation on desktop, bottom on mobile</p>
 									</div>
+									
+								</div>
+								<div class="p-4 vertical-menu " data-nav='menu-three' data-menu-place='footer' v-bind:style="{ display: display.three }">
+									<div class=" md:bg-yellow-200 md:p-2">
+										<p class="block p-3 text-center md:text-left text-white md:text-gray-600 ">You have a footer to play around with. Not enough? Customize the menu!</p>
+									</div>
+									
 								</div>
 								
-								<a href="https://github.com/PetroglyphCode/petroglyph-UI" class="text-gray-100 hover:text-gray-700 px-4 py-3 md:py-1  rounded text-gray-100 hover:border-blue-600 block  hover:bg-gray-100 ml-auto mr-auto md:mr-0 md:ml-0 md:flex font-medium  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6  text-center">GitHub</a>
+								
 								
 							</li>
 							<li class="secondary_nav  md:flex md:justify-end md:w-1/2 lg:w-auto items-center" v-bind:class="{'block': m_showing, 'hidden': !m_showing}">
-							
+								<a href="https://github.com/PetroglyphCode/petroglyph-UI" class="text-gray-100 hover:text-gray-700 px-4 py-3 md:py-1  rounded text-gray-100 hover:border-blue-600 block  hover:bg-gray-100 ml-auto mr-auto md:mr-0 md:ml-0 md:flex font-medium  text-2xl md:text-base lg:text-lg md:px-3 lg:px-6  text-center">GitHub</a>
 								
 							</li>
 						</ul>
@@ -117,14 +135,14 @@
 			      <li class='mb-2'>Set up WebPack bundling system and learn its ins and outs.</li>
 			      <li class='mb-2'>Get up to speed on Post-CSS, specifically Tailwind CSS, and evaluate it for the agency's needs.</li>
 			      <li class='mb-2'>Deep-dive into CSS Flex.</li>
-			      <li class='mb-2'>Create a front-end code set that can be used on the new PetroglyphCreative.com</li>
+			      <li class='mb-2'>Create a front-end code set that can grow with Aquarian Web Studio</li>
 			      <li class='mb-2'>Create a working WebPack template to use as a starting point for future Tailwind, React, or Vue projects.</li>
 			      <li class='mb-2'>Look good on Twitter.</li>
 			  </ul>
 		</div>
 
 	</div>
-	<div class='flex mb-4 '>
+	<div class='flex mb-4 ' id='typography'>
 		<div class="w-3/4 ml-auto mr-auto  h-12 font-body">
 			<hr class="bg-blue-300 h-1">
 		</div>
@@ -249,7 +267,7 @@
 			</tr>
 		</table>
 	</div>
-	<div class='flex mb-4 '>
+	<div class='flex mb-4 ' >
 		<div class="w-2/3 mr-auto ml-auto flex flex-wrap">
 			<div class="w-1/2">
 				<h4 class="heading-s">Line Length</h4>
@@ -282,7 +300,7 @@
 			</blockquote>
 		</div>
 	</div>
-	<div class='flex mb-4 '>
+	<div class='flex mb-4 ' id='colors'>
 		<div class="w-3/4 ml-auto mr-auto  h-12 font-body">
 			<hr class="bg-blue-300 h-1">
 		</div>
@@ -385,58 +403,63 @@
 			<hr class="bg-blue-300 h-1">
 		</div>
 	</div>
-	  <div class='flex mb-4 '>
-		<div class=" w-full md:w-3/4 lg:w-1/2 ml-auto mr-auto font-body my-8 read">
-      <h1 class="">What if your blog title is really, really long? (h1)</h1>
-      <p class="">Petroglyph Creative listens carefully to clients from the start, creating secure, flexible websites configured to your workflows and goals. We start simply and refuse to make things complex when they don’t need to be, exploring options for your company from many angles, because we love to help those who help others. </p>
-      <p class="">Here's another text paragraph. How does the spacing look? Does it look right on mobile? can we make improvements for middle-width devices? Big screens, small screens all about the thread memes.</p>
-      <h2  >Secondary heading (h2)</h2>
-      <figure >
-      <img class="mr-auto ml-auto"src='./assets/img/sometimes_800.jpg' alt='image' title='Sometimes painting by Caroline C. Blaker Latex on Canvas, 2011'>
+	  <div class='flex mb-4 flex-col lg:flex-row' id='text'>
+		<div class="w-full lg:w-1/6  font-body flex flex-wrap text-gray-700 text-right">
+			<h2 class="lg:ml-5 text-2xl font-display text-orange-700 font-bold">Text</h2>
+		</div>
+		<div class="mx-4 md:mx-0">
+		<div class="w-full md:w-3/4 lg:w-1/2 ml-auto mr-auto font-body my-8 read">
+			<h1 class="">What if your blog title is really, really long? (h1)</h1>
+			<p class="">Petroglyph Creative listens carefully to clients from the start, creating secure, flexible websites configured to your workflows and goals. We start simply and refuse to make things complex when they don’t need to be, exploring options for your company from many angles, because we love to help those who help others. </p>
+			<p class="">Here's another text paragraph. How does the spacing look? Does it look right on mobile? can we make improvements for middle-width devices? Big screens, small screens all about the thread memes.</p>
+			<h2  >Secondary heading (h2)</h2>
+			<figure >
+			<img class="mr-auto ml-auto"src='./assets/img/sometimes_800.jpg' alt='image' title='Sometimes painting by Caroline C. Blaker Latex on Canvas, 2011'>
 
-      <figcaption class="text-center">Sometimes, by Caroline C. Blaker Latex on Canvas, 2011 ~ Contact for Price</figcaption>
-      </figure>
-      <p>Too many businesses rely on limited blog and web brochure platforms that are often risky, waste money and limit growth over time. They can be impersonal and stiff and work against customer-facing needs. We believe that although the web is an automated, template-laden landscape, understanding the way people interact, and communicate with companies is our most valuable asset.</p>
-      <h3>Tertiary heading (h3)</h3>
-      <blockquote cite="https://www.huxley.net/bnw/four.html">
-          <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
-          <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
-      </blockquote>
-      <p>Petroglyph Creative enables clients to publish anything they want, whenever they want, as they desire to do so by giving small to medium sized organizations the ultimate flexibility and scaling web development options to fit growing needs. We have implemented hundreds of additional features and changes seamlessly into clients’ websites since 2010.</p>
-      <h4 class="">Reminder heading or punchline (h4)</h4>
-      <p>Petroglyph Creative offers a combined 40+ years of web problem solving for clients and is led by Caroline Blaker, a nationally renowned “tech lead” who guides efficient, focused contractors with her fifteen years of web creation. Caroline has twelve years’ experience programming in Wordpress, and has utilized ExpressionEngine for the benefit of her clients since version 1.6.3!</p>
-      <h5 class="">More info heading (h5)</h5>
+			<figcaption class="text-center">Sometimes, by Caroline C. Blaker Latex on Canvas, 2011 ~ Contact for Price</figcaption>
+			</figure>
+			<p>Too many businesses rely on limited blog and web brochure platforms that are often risky, waste money and limit growth over time. They can be impersonal and stiff and work against customer-facing needs. We believe that although the web is an automated, template-laden landscape, understanding the way people interact, and communicate with companies is our most valuable asset.</p>
+			<h3>Tertiary heading (h3)</h3>
+			<blockquote cite="https://www.huxley.net/bnw/four.html">
+				<p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+				<footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+			</blockquote>
+			<p>Petroglyph Creative enables clients to publish anything they want, whenever they want, as they desire to do so by giving small to medium sized organizations the ultimate flexibility and scaling web development options to fit growing needs. We have implemented hundreds of additional features and changes seamlessly into clients’ websites since 2010.</p>
+			<h4 class="">Reminder heading or punchline (h4)</h4>
+			<p>Petroglyph Creative offers a combined 40+ years of web problem solving for clients and is led by Caroline Blaker, a nationally renowned “tech lead” who guides efficient, focused contractors with her fifteen years of web creation. Caroline has twelve years’ experience programming in Wordpress, and has utilized ExpressionEngine for the benefit of her clients since version 1.6.3!</p>
+			<h5 class="">More info heading (h5)</h5>
 
 
-      <footer class='flex m-2 bg-green-500 text-white p-4 mt-6'>
-        <div class="w-full md:w-1/3">
-          <h4 class="font-display text-xl  m-1 font-semibold"> Code Tools</h4>
-          <ul class="m-3">
-				<li class='my-2 leading-tight'>Foundation Sites </li>
-				<li class='my-2 leading-tight'>Gulp Compiled front-end</li>
-				<li class='my-2 leading-tight'>Responsive CSS 3, HTML5, JS</li>
-			</ul>
-         </div>
-        <div class="w-full md:w-1/3">
-          <h4 class="font-display text-xl  m-1 font-semibold">Build Tools</h4>
-          <ul  class="m-3">
-	          	  <li class='my-2 leading-tight'>ExpressionEngine 5 (open source)</li>
-	          	  <li class='my-2 leading-tight'>Gulp, NPM</li>
-          </ul>
-        </div>
-        <div class="w-full md:w-1/3">
-          	  <h4 class="font-display text-xl  m-1 font-semibold"> Credits </h4>
-          	  <ul  class="m-3">
-          	      <li class='my-2 leading-tight'>Thank you This Person for your pro-bono matching donation of a stellar add0n</li>
-          	      <li class='my-2 leading-tight'>Thank you 516 ARTS staff for your tremendous effort in content curation to get the site polished.</li>
-          	   </ul>
-         </div>
+			<footer class='flex m-2 bg-green-500 text-white p-4 mt-6'>
+				<div class="w-full md:w-1/3">
+				<h4 class="font-display text-xl  m-1 font-semibold"> Code Tools</h4>
+				<ul class="m-3">
+						<li class='my-2 leading-tight'>Foundation Sites </li>
+						<li class='my-2 leading-tight'>Gulp Compiled front-end</li>
+						<li class='my-2 leading-tight'>Responsive CSS 3, HTML5, JS</li>
+					</ul>
+				</div>
+				<div class="w-full md:w-1/3">
+				<h4 class="font-display text-xl  m-1 font-semibold">Build Tools</h4>
+				<ul  class="m-3">
+						<li class='my-2 leading-tight'>ExpressionEngine 5 (open source)</li>
+						<li class='my-2 leading-tight'>Gulp, NPM</li>
+				</ul>
+				</div>
+				<div class="w-full md:w-1/3">
+					<h4 class="font-display text-xl  m-1 font-semibold"> Credits </h4>
+					<ul  class="m-3">
+						<li class='my-2 leading-tight'>Thank you This Person for your pro-bono matching donation of a stellar add0n</li>
+						<li class='my-2 leading-tight'>Thank you 516 ARTS staff for your tremendous effort in content curation to get the site polished.</li>
+					</ul>
+				</div>
 
-      </footer>
+			</footer>
+		</div>
+		</div>
 	</div>
-  </div>
 	
-	<div class='flex mb-4 '>
+	<div class='flex mb-4 ' id='uicomponents'>
 		<div class="w-3/4 ml-auto mr-auto  h-12 font-body">
 			<hr class="bg-blue-300 h-1">
 		</div>
@@ -660,7 +683,7 @@
 	</div>
 	<footer class='flex  bg-green-800  '>
 		<div class="w-full  font-body px-7 ">
-		<p class='font-body  text-center text-white m-12'> Code by Caroline C. Blaker for <a href="https://www.petroglyphcreative.com" class='text-blue-200'>Petroglyph Creative</a> using Tailwind CSS and Webpack. UI Kit Design by <a href="https://block81.com" class='text-blue-200'>Block 81</a>.</p>
+		<p class='font-body  text-center text-white m-12'> Code by Caroline C. Blaker for <a href="https://www.aquarianwebdesign.com" class='text-blue-200'>Aquarian Web Studio</a> using Tailwind CSS and Webpack. UI Kit Design by <a href="https://block81.com" class='text-blue-200'>Block 81</a>.</p>
 		</div>
     </footer>
   </body>
