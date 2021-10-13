@@ -14,6 +14,23 @@ module.exports = {
       focus: '0 0 0 3px rgba(96,171,210,0.5)',
       'none': 'none',
     },
+	screens: {
+		'sm': '640px',
+		// => @media (min-width: 640px) { ... }
+  
+		'md': '768px',
+		// => @media (min-width: 768px) { ... }
+  
+		'lg': '1024px',
+		// => @media (min-width: 1024px) { ... }
+  
+		'xl': '1280px',
+		// => @media (min-width: 1280px) { ... }
+
+		'xxl': '1440px',
+
+		'xxxl': '1824px',
+	  },
     extend: {
 	    colors: {
 	        gray: {
