@@ -59,10 +59,10 @@ module.exports = {
   ],
   output: {
 	  filename:'[name].js',
-    path: path.resolve(__dirname, 'docs')
+    path: path.resolve(__dirname, 'public')
   },
   devServer: {
 	  watchContentBase: true,
-    contentBase: path.join(__dirname, 'docs') // Get it to serve from somewhere other than right here.
+    contentBase: path.join(__dirname, 'public') // Get it to serve from somewhere other than right here.
   }
 }
