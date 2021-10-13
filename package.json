@@ -8,7 +8,7 @@
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^9.8.8",
     "cross-env": "^5.1",
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
@@ -18,12 +18,12 @@
     "postcss-loader": "^2.1.1",
     "style-loader": "^0.20.3",
     "tailwindcss": "^1",
-    "webpack": "^4.27.1",
+    "webpack": "^4.46.0",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "vue": "^2.6.12"
+    "vue": "^2.6.14"
   }
 }
