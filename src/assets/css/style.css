@@ -1,9 +1,11 @@
 @tailwind base;
-
+@tailwind components;
+@tailwind utilities;
+@layer base {
 
 @font-face {
   font-family: 'Zilla Slab';
-  font-weight: 400; 
+  font-weight: 400;
   src: url(../fonts/zilla-slab/ZillaSlab-Regular.otf) format('opentype');
 }
 @font-face {
@@ -78,16 +80,18 @@
   font-style:italic;
   src: url("../fonts/libre-franklin/librefranklin-bolditalic.ttf") format("truetype");
 }
-
-@tailwind components;
-
-@tailwind utilities;
 a{ @apply text-blue-700 font-semibold border-b-2 border-yellow-400;}
 hr {border-width:0;}
 
 th{
   @apply bg-gray-100 text-gray-300 font-bold py-2  text-left;
 }
+
+}
+/* # end base  */
+
+
+
 .text-tiny {
 	font-size:12px;
 	line-height:16px;
@@ -273,7 +277,7 @@ header  nav button{
 
 }
 header  nav button:focus{
-	outline:none;	
+	outline:none;
 }
 header .dropdown-box {
 	min-width:500px; /* arbitrary size. adjust if necessary */
@@ -290,9 +294,9 @@ header  nav a.highlight{
 }
 header nav .menu-right a{
 	@apply font-light text-large text-gray-600;
-	
+
 	}
-header nav .subnav.right a.highlight{	
+header nav .subnav.right a.highlight{
 	@apply font-semibold text-large;
 	}
 header nav .subnav.right	.rightside-categories a {
@@ -372,5 +376,5 @@ blockquote footer{
 	@apply text-small italic text-gray-500  mt-4 mb-2;
 }
 blockquote footer a{
- @apply not-italic;	
+ @apply not-italic;
 }
