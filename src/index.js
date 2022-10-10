@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import  { createApp } from 'vue';
+import  { createApp } from 'vue/dist/vue.esm-bundler.js';
 
 import img from './assets/img/sometimes_800.jpg';
 
@@ -23,7 +23,7 @@ const drawer = createApp({
     }
   },
 	methods:{
-		toggledrawer: function(event){
+		toggledrawer(event){
 			this.d_showing = !this.d_showing;
 		}
 	}
@@ -60,7 +60,7 @@ const thing = createApp({
     }
   },
   methods: {
-	    hovermenu: function (event) { //hovering buttons - open or move the menu
+	    hovermenu (event) { //hovering buttons - open or move the menu
 		    if (!this.mobile){
 		        this.hovering = true;
 		   // console.log("Hovering on "+ event.target.getAttribute('data-menu'));
@@ -75,16 +75,16 @@ const thing = createApp({
   		     }
 		    }
 		},
-		hoverboard: function(event ){
+		hoverboard(event ){
 			this.hovering = true;
 			this.showing = true;
 		},
-		resetmenu: function(){
+		resetmenu(){
 			this.display.one= 'none';
 			this.display.two='none';
 			this.display.three= 'none';
 		},
-		openmenu: function (event) { //grabs which menu and opens it from closed
+		openmenu (event) { //grabs which menu and opens it from closed
 			this.mobile = window.innerWidth >767 ? false: true;
 			let targetmenu = event.target.getAttribute('data-menu');
 
@@ -104,7 +104,7 @@ const thing = createApp({
 				this.propogatemenu(event);
 			}
 		},
-		getposition: function(elem){
+		getposition(elem){
 			//console.log(elem.offsetWidth);
 			let newmenu = elem.getAttribute('data-menu');
 			let newmenu_cpos= (elem.offsetWidth /2) + elem.offsetLeft; // center of the button half the width of the button plus its distance from the left side
@@ -119,7 +119,7 @@ const thing = createApp({
 			//console.log(newmenu_lpos);
 			return newmenu_lpos;
 		},
-		movemenu: function(event)  { //grabs which menu and opens it from open on another menu
+		movemenu(event)  { //grabs which menu and opens it from open on another menu
 			// menu has to be open for this to work
 			if (!this.mobile){
 			if (this.showing === false){
@@ -135,7 +135,7 @@ const thing = createApp({
 		    }
 
 		},
-		togglemenu: function(event) { // Should exclusively fire for buttons.
+		togglemenu(event) { // Should exclusively fire for buttons.
 			//console.log('now toggling');
 			//
 			if(this.showing && this.menu.name !== event.target.getAttribute('data-menu')){ //menu should switch which is open
@@ -162,7 +162,7 @@ const thing = createApp({
 
 		},
 
-		propogatemenu: function(event){ // Let' put the menu together:
+		propogatemenu(event){ // Let' put the menu together:
 			this.resetmenu();
 			this.menu.title = event.target.getAttribute('data-menutitle'); //title
 			//this.menutitle= this.menu.title;
@@ -175,13 +175,13 @@ const thing = createApp({
 			this.menu.footer = document.querySelector('[data-nav="'+this.menu.name+'"][data-menu-place="footer"]') ? document.querySelector('[data-nav="'+this.menu.name+'"][data-menu-place="footer"]').innerHTML : null; // we may have a header - null if not
 
 		},
-		hideboard: function( event) {
+		hideboard( event) {
 
 			if (!this.mobile){
 				this.hidemenu(event);
 			}
 		},
-		hidemenu: function (event, delay= true) { // when the hovering stops
+		hidemenu (event, delay= true) { // when the hovering stops
 			//console.log('delay -->' + delay);
 
 			this.hovering= false;
@@ -204,7 +204,7 @@ const thing = createApp({
 			this.resetmenu();
 			}
 		},
-		openMobileMenuContainer: function(x) {
+		openMobileMenuContainer(x) {
 			this.m_showing = this.m_showing === true ? false : true; //change the class
 			}
       }
