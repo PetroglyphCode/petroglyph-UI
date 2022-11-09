@@ -105,17 +105,18 @@ const thing = createApp({
 			}
 		},
 		getposition(elem){
-			//console.log(elem.offsetWidth);
 			let newmenu = elem.getAttribute('data-menu');
+			let width = 500;
+			let pageWidth = document.getElementById("pagehead").offsetWidth;
 			let newmenu_cpos= (elem.offsetWidth /2) + elem.offsetLeft; // center of the button half the width of the button plus its distance from the left side
 			//console.log(newmenu_cpos);
 			//console.log('offsetwiddth: '+document.getElementById("menubox").offsetWidth);
-			let width = document.getElementById("menubox").offsetWidth > 0 ? document.getElementById("menubox").offsetWidth : 500; //width of the menu itself
-			//console.log('width var: '+ width);
-			//console.log('ofsl: '+document.getElementById("menuroot").offsetLeft);
+			width = document.getElementById("menubox").offsetWidth > 0 ? document.getElementById("menubox").offsetWidth : width; 
 			let newmenu_lpos=  newmenu_cpos - (document.getElementById("menuroot").offsetLeft) - (width /2); //- (document.getElementById("menuroot").offsetWidth)
+			//need a value of at least zero.
 			newmenu_lpos= Math.sign(newmenu_lpos) < 0 ? 0 : newmenu_lpos;
-			//console.log(document.getElementById("menubox").offsetWidth /2);
+			//and! Menu should not run off the side of the page.
+			newmenu_lpos = width + newmenu_lpos > pageWidth ? pageWidth - width : newmenu_lpos;
 			//console.log(newmenu_lpos);
 			return newmenu_lpos;
 		},
