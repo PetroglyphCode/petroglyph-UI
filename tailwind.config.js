@@ -4,7 +4,7 @@ module.exports = {
   ],
   theme: {
 	fontFamily: {
-      'display': 'Zilla Slab, serif',
+      'display': ['"Zilla Slab"', 'serif'],
       'body': ['"Libre Franklin"', 'sans-serif'],
     },
     extend: {
