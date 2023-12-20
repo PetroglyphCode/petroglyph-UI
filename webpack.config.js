@@ -3,7 +3,7 @@ const { compile } = require('@vue/compiler-sfc');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -70,13 +70,18 @@ module.exports = {
        }
      ],
   },
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
 	    filename: 'index.html',
       template: 'src/index.html'
     }),
     new MiniCssExtractPlugin({
-        filename:"css/[name].css",
+        filename:"[name].css",
     }),
   ],
   output: {
