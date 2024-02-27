@@ -1,20 +1,13 @@
 <template>
-    <div class='flex mb-4 flex-col lg:flex-row' id='text'>
-		<div class="w-full lg:w-1/6  font-body flex flex-wrap text-gray-700 text-right">
-			<h2 class="lg:ml-5 text-2xl font-display text-orange-700 font-bold">Text</h2>
-		</div>
-		<div class="mx-4 md:mx-0">
+   
+	<div class="mx-4 md:mx-0">
 		<div class="w-full md:w-3/4 lg:w-1/2 ml-auto mr-auto font-body my-8 read">
 			<h1 class="">What if your blog title is really, really long? (h1)</h1>
 			<p class="">Aquarian Web Studio listens carefully to clients from the start, creating secure, flexible websites configured to business workflows and goals. We start simply and refuse to make things complex when they don’t need to be, exploring options for your company from many angles, because we elevate your website to become a partner in your success. </p>
 			<p class="">Here's another text paragraph. How does the spacing look? Does it look right on mobile? can we make improvements for middle-width devices? Big screens, small screens all about the thread memes.</p>
-			<h2  >Secondary heading (h2)</h2>
-			<figure >
-			<img class="mr-auto ml-auto" :src='imagePath' alt='image' title='Sometimes painting by Caroline C. Blaker Latex on Canvas, 2011'>
+			<h2 >Is this heading long enough? (h2)</h2>
+			<FigureImage :imagePath="imagePath" captionText="Sometimes painting by Caroline C. Blaker Latex on Canvas, 2011. Also, Figure component display with sample image." altText="Text figure image sample inclusion "></FigureImage>
 
-			<figcaption class="text-center">Sometimes, by Caroline C. Blaker Latex on Canvas, 2011 ~ Contact for Price</figcaption>
-			</figure>
-            
 			<p>Too many businesses rely on limited blog and web brochure platforms that are often risky, waste money and limit growth over time. They can be impersonal and stiff and work against customer-facing needs. We believe that although the web is an automated, template-laden landscape, understanding the way people interact, and communicate with companies is our most valuable asset.</p>
 			<h3>Tertiary heading (h3)</h3>
 			<blockquote cite="https://www.aquarianwebdesign.com/blog/2023/wordpress-keeps-getting-hacked">
@@ -29,17 +22,20 @@
 
 			<TextPanelFooter></TextPanelFooter>
 		</div>
-		</div>
 	</div>
+
 
 </template>
 <script>
 import imagePath from '../assets/img/sometimes_800.jpg'
 import TextPanelFooter from './TextPanelFooter.vue'
+import FigureImage from './FigureImage.vue'
+
 export default{
 
     components:{
-        TextPanelFooter
+        TextPanelFooter,
+		FigureImage
     },
     data(){
         return {
@@ -48,5 +44,14 @@ export default{
     }
 }
 </script>
-<style scoped>
+<style  lang="postcss">
+blockquote {
+	@apply text-2xl border-l-4 border-green-200 text-gray-600 p-6 my-6 ;
+}
+blockquote footer{
+	@apply text-sm italic text-gray-500  mt-4 mb-2;
+}
+blockquote footer a{
+ @apply not-italic;
+}
 </style>

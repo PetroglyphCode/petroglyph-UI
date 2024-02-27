@@ -32,6 +32,12 @@ module.exports = {
         }
          
        },
+       {
+        test: /\.postcss$/,
+        use: [   'vue-style-loader',
+        { loader: 'css-loader', options: { importLoaders: 1 } },
+        'postcss-loader']
+      },
       {
         test: /\.css$/,
         include: path.resolve(__dirname, 'src'),
@@ -43,6 +49,7 @@ module.exports = {
             }
           },
           'css-loader',
+          
           {
             loader: 'postcss-loader',
             options: {
@@ -60,6 +67,7 @@ module.exports = {
               
             }
           }
+        
         ]
       },
        {

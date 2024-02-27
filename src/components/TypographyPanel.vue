@@ -1,9 +1,4 @@
 <template>
-    <div class='flex mb-4 ' id='typography'>
-		<div class="w-3/4 ml-auto mr-auto  h-12 font-body">
-			<hr class="bg-blue-300 h-1">
-		</div>
-	</div>
 	<div class='lg:flex mb-4 ml-auto mr-auto lg:mr-0 lg:ml-0 w-3/4 lg:w-full '>
 	    <div class="w-full lg:w-1/6  font-body flex  text-gray-700 text-right">
 			<h2 class="lg:ml-20 text-2xl font-display text-orange-700 font-bold" id='typography'>Typography</h2>

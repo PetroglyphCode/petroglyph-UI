@@ -1,5 +1,5 @@
 <template>
-<footer class='flex m-2 bg-blue-800 text-white p-4 mt-6'>
+<footer class='flex bg-blue-800 text-white p-4 mt-8'>
 	<div class="w-full md:w-1/3">
 				<h4 class="font-display text-xl  m-1 font-semibold"> Code Tools</h4>
 				<ul class="m-3 text-small">

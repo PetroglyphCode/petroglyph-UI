@@ -1,9 +1,4 @@
 <template>
-    <div class='flex mb-4 ' id='colors'>
-		<div class="w-3/4 ml-auto mr-auto  h-12 font-body">
-			<hr class="bg-blue-300 h-1">
-		</div>
-	</div>
 	<div class='lg:flex mb-4 ml-auto mr-auto lg:mr-0 lg:ml-0 w-3/4 lg:w-full '>
 	    <div class="w-full lg:w-1/6  font-body flex flex-wrap text-gray-700 text-right">
 			<h2 class="lg:ml-20 text-2xl font-display text-orange-700 font-bold">Color</h2>
@@ -29,7 +24,7 @@
 			  <div class="flex-1 bg-gray-300 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-gray-400 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-gray-500 h-12 md:h-20 lg:h-30"></div>
-			  <div class="flex-1 bg-gray-600  h-12 md:h-20 lg:h-30"></div>
+			  <div class="flex-1 bg-gray-600 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-gray-700 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-gray-800 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-gray-900 h-12 md:h-20 lg:h-30"></div>
@@ -40,7 +35,7 @@
 			  <div class="flex-1 bg-green-300 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-green-400 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-green-500 h-12 md:h-20 lg:h-30"></div>
-			  <div class="flex-1 bg-green-600  h-12 md:h-20 lg:h-30"></div>
+			  <div class="flex-1 bg-green-600 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-green-700 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-green-800 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-green-900 h-12 md:h-20 lg:h-30"></div>
@@ -51,7 +46,7 @@
 			  <div class="flex-1 bg-orange-300 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-orange-400 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-orange-500 h-12 md:h-20 lg:h-30"></div>
-			  <div class="flex-1 bg-orange-600  h-12 md:h-20 lg:h-30"></div>
+			  <div class="flex-1 bg-orange-600 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-orange-700 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-orange-800 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-orange-900 h-12 md:h-20 lg:h-30"></div>
@@ -66,7 +61,7 @@
 			  <div class="flex-1 bg-blue-300 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-blue-400 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-blue-500 h-12 md:h-20 lg:h-30"></div>
-			  <div class="flex-1 bg-blue-600  h-12 md:h-20 lg:h-30"></div>
+			  <div class="flex-1 bg-blue-600 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-blue-700 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-blue-800 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-blue-900 h-12 md:h-20 lg:h-30"></div>
@@ -88,7 +83,7 @@
 			  <div class="flex-1 bg-red-300 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-red-400 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-red-500 h-12 md:h-20 lg:h-30"></div>
-			  <div class="flex-1 bg-red-600  h-12 md:h-20 lg:h-30"></div>
+			  <div class="flex-1 bg-red-600 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-red-700 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-red-800 h-12 md:h-20 lg:h-30"></div>
 			  <div class="flex-1 bg-red-900 h-12 md:h-20 lg:h-30"></div>
@@ -97,11 +92,7 @@
 		</div>
 	</div>
 	<p class='w-full text-medium text-center mb-10'>A beautiful and harmonious color palate will draw the user in and invite interaction; and is therefore critical to good UX.</p>
-	<div class='flex mb-4 '>
-		<div class="w-3/4 ml-auto mr-auto  h-12 font-body">
-			<hr class="bg-blue-300 h-1">
-		</div>
-	</div>
+
 </template>
 <script>
 export default{}
