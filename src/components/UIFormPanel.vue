@@ -64,7 +64,7 @@
 	        Select
 	      </label>
 	      <div class="relative">
-	        <UIFormPanelSelect elementId="selectfirst" :elementOptions="UIPrimarySelectFields" :elementClass="foo"></UIFormPanelSelect>
+	        <UIFormPanelSelect elementId="selectfirst" :elementOptions="UIPrimarySelectFields" :elementClass="foo" @selectionFromSelect="(emittedValue)" ></UIFormPanelSelect>
 	        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
 	          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
 	        </div>
@@ -76,27 +76,27 @@
 	<div class="flex mb4">
 		<div class="mb-4 w-1/2 md:w-1/3 lg:w-1/4  p-6">
 			      <h4 class='font-display heading-xs text-green-600'>Checkboxes</h4>
-			      <div>
+			      <div class="flex">
 				  	<input type="checkbox" id="webdesign" name="webdesign" checked>
 				  	<label for="webdesign"  class='font-normal'>Web Design</label>
 				  </div>
-				<div>
+				<div class="flex">
 				  <input type="checkbox" id="sardines" name="sardines">
 				  <label for="sardines" class='font-normal'>Sardine Ice Cream</label>
 				</div>
 			    </div>
 			    <div class="mb-4 w-1/2 md:w-1/3 lg:w-1/4  p-6">
 			      <h4 class='font-display heading-xs text-green-600'>Radio buttons</h4>
-				  <div>
+				  <div class="flex">
 					 <input type="radio" id="contactChoice1" name="contact" value="email">
 					    <label for="contactChoice1" class='font-normal'>Email</label>
 					</div>
-					<div>
+					<div class="flex">
 					    <input type="radio" id="contactChoice2" name="contact" value="phone">
 					    <label for="contactChoice2" class='font-normal'>Phone</label>
 				  </div>
 			    </div>
-			    <div  class="w-full lg:w-1/2p-6">
+			    <div  class="w-full lg:w-1/2 p-6">
 					<UIFormPanelDrawer :choices="choices" :label="label" :instructions="instructions"></UIFormPanelDrawer>
 				</div>
 			</div>

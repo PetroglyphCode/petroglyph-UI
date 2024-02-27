@@ -3,8 +3,6 @@ import  App from './App.vue'
 import  { createApp } from 'vue/dist/vue.esm-bundler.js';
 
 
-import img from './assets/img/sometimes_800.jpg';
-
 const app = createApp(App).mount('#onePageApp')
 
 function append() {
