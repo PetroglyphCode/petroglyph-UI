@@ -91,7 +91,7 @@ th{
 /* # end base  */
 
 
-
+@layer base{
 .text-tiny {
 	font-size:12px;
 	line-height:16px;
@@ -157,45 +157,14 @@ th{
 }
 
 
-
 ::selection {
   background: #F7C5A4; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
   background: #F7C5A4; /* Gecko Browsers */
 }
-figcaption {
-	@apply text-small italic text-gray-700 p-2;
 }
-p.short{max-width:39px; min-width:35px;}
-p.compliant{max-width:50px; min-width:40px;}
-p.optimal{max-width:90px; min-width:51px;}
-p.toobig{ min-width:91px;}
-.read {@apply ml-auto mr-auto;}
-.read p {
- @apply  max-w-2xl mr-auto ml-auto my-4 text-large;
-}
-.read h1 {@apply heading-dxl text-orange-600}
-.read h2 {@apply heading-l text-blue-500 my-8;}
-.read.home h2 {@apply text-orange-500;}
-.read h3{@apply heading-m text-gray-400 my-8;}
-.read h4 {@apply heading-s text-gray-700  my-8;}
-.read h5 {@apply heading-xs text-gray-700  my-8;}
-.read figure { @apply ml-auto mr-auto my-8;}
-.read ul {
-   @apply  max-w-xl mr-auto ml-auto my-4 text-large leading-snug list-disc ;
-   max-width:620px;
-}
-.read footer h4 {
-	@apply text-green-100;
-}
-.read footer ul {
-	@apply list-none text-large;
 
-}
-.read blockquote p{
-  max-width:none;
-}
 header  nav a{ /* #  differentiate from sitewide nav if needed */
 	@apply border-0 ;
 }
@@ -281,5 +250,41 @@ a.active{
 .text-shadow-md {
 	text-shadow:2px 3px 4px #373533;
 }
+@layer utilities{
+  .read {@apply ml-auto mr-auto;}
+  .read p {
+   @apply  max-w-2xl mr-auto ml-auto my-4 text-large;
+  }
+  .read h1 {@apply heading-dxl text-orange-600}
+  .read h2 {@apply heading-l text-blue-500 my-8;}
+  .read.home h2 {@apply text-orange-500;}
+  .read h3{@apply heading-m text-gray-400 my-8;}
+  .read h4 {@apply heading-s text-gray-700  my-8;}
+  .read h5 {@apply heading-xs text-gray-700  my-8;}
+  .read figure { @apply ml-auto mr-auto my-8;}
+  .read ul {
+     @apply  max-w-xl mr-auto ml-auto my-4 text-large leading-snug list-disc ;
+     max-width:620px;
+  }
+  .read footer h4 {
+    @apply text-green-100;
+  }
+  .read footer ul {
+    @apply list-none text-large;
+  
+  }
+  .read blockquote p{
+    max-width:none;
+  }
+  blockquote {
+    @apply text-2xl border-l-4 border-green-200 text-gray-600 p-6 my-6 ;
+  }
+  blockquote footer{
+    @apply text-sm italic text-gray-500  mt-4 mb-2;
+  }
+  blockquote footer a{
+   @apply not-italic;
+  }
+  }
 
 

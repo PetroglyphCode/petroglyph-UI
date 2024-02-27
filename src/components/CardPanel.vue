@@ -80,9 +80,6 @@ const cardData = [
                 href:'https://www.aquarianwebdesign.com/web-design-process',
                 class:'CTA'
             },{
-                text:'',
-                href:'https://www.aquarianwebdesign.com/web-design-process'
-            },{
                 text:'Custom Website Design',
                 href:'https://www.aquarianwebdesign.com/web-design-process'
             }

@@ -25,5 +25,8 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style lang="postcss">
+figcaption {
+	@apply text-sm italic text-gray-700 p-2;
+}
 </style>

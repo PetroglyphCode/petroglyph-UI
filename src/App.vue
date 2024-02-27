@@ -18,7 +18,9 @@
         <PanelDivider elementId="cards" tailwindColor="bg-blue-300"></PanelDivider>
 
        <CardPanel></CardPanel>
+       <PanelDivider elementId="footer" tailwindColor="bg-blue-300"></PanelDivider>
 
+      <DocumentFooter></DocumentFooter>
     </div>
 </template>
 
@@ -34,6 +36,7 @@ import TextPanel from './components/TextPanel.vue';
 import UIFormPanel from './components/UIFormPanel.vue';
 import ImagePanel from './components/ImagePanel.vue';
 import CardPanel from './components/CardPanel.vue'
+import DocumentFooter from './components/DocumentFooter.vue'
 
 
 const fullConfig = resolveConfig(tailwindConfig)
@@ -48,7 +51,8 @@ export default{
         TextPanel,
         UIFormPanel,
         ImagePanel,
-        CardPanel
+        CardPanel,
+        DocumentFooter
         
     },
     data(){
@@ -69,6 +73,7 @@ export default{
 
 <style >
 /* Styles placed here are global */
+
 @font-face {
   font-family: 'Zilla Slab';
   font-weight: 400;

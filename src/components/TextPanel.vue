@@ -44,14 +44,13 @@ export default{
     }
 }
 </script>
+<style scoped>
+p.short{max-width:39px; min-width:35px;}
+p.compliant{max-width:50px; min-width:40px;}
+p.optimal{width: 65ch; max-width:90px; min-width:51px;}
+p.toobig{ min-width:91px;}
+</style>
 <style  lang="postcss">
-blockquote {
-	@apply text-2xl border-l-4 border-green-200 text-gray-600 p-6 my-6 ;
-}
-blockquote footer{
-	@apply text-sm italic text-gray-500  mt-4 mb-2;
-}
-blockquote footer a{
- @apply not-italic;
-}
+@tailwind utilities;
+
 </style>
