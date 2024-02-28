@@ -4,6 +4,7 @@ const { compile } = require('@vue/compiler-sfc');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   entry: {
@@ -31,6 +32,12 @@ module.exports = {
         }
          
        },
+       {
+        test: /\.postcss$/,
+        use: [   'vue-style-loader',
+        { loader: 'css-loader', options: { importLoaders: 1 } },
+        'postcss-loader']
+      },
       {
         test: /\.css$/,
         include: path.resolve(__dirname, 'src'),
@@ -42,6 +49,7 @@ module.exports = {
             }
           },
           'css-loader',
+          
           {
             loader: 'postcss-loader',
             options: {
@@ -59,6 +67,7 @@ module.exports = {
               
             }
           }
+        
         ]
       },
        {
@@ -83,6 +92,7 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename:"[name].css",
     }),
+    new VueLoaderPlugin()
   ],
   output: {
 	  filename:'[name].js',

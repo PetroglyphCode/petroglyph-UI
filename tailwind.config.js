@@ -1,6 +1,7 @@
 module.exports = {
   content: [
-    './src/*.{html,js}'
+    './src/*.{html,js,vue}',
+	'./src/**/*.{html,js,vue}'
   ],
   theme: {
 	fontFamily: {
