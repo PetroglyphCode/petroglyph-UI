@@ -3,7 +3,9 @@
 	<TopNavigation></TopNavigation>
     <div id="main">
         <IntroPanel></IntroPanel>
-        <PanelDivider elementId="typography" tailwindColor="bg-gray-100"></PanelDivider>
+        <ApiPanel panelTitle="Who We Are"></ApiPanel>
+
+        <PanelDivider elementId="typography" tailwindColor="bg-blue-200"></PanelDivider>
         <TypographyPanel :fonts="fonts"></TypographyPanel>
         <PanelDivider elementId="colors" tailwindColor="bg-blue-200"></PanelDivider>
         <ColorPanel></ColorPanel>
@@ -19,7 +21,7 @@
 
        <CardPanel></CardPanel>
        <PanelDivider elementId="apipanel" tailwindColor="bg-blue-300"></PanelDivider>
-        <ApiPanel panelTitle="API Integrations"></ApiPanel>
+       <ApiPanel panelTitle="API Integrations"></ApiPanel>
       <DocumentFooter></DocumentFooter>
     </div>
 </template>

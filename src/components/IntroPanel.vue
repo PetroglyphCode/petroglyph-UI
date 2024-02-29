@@ -9,7 +9,7 @@
 		<h3 class='font-display text-large text-center text-gray-600'>A starter library for building websites and web apps using Vue.js, WebPack and Tailwind CSS</h3>
 		</div>
 	</div>
-	<div class="flex mb-4">
+	<div class="flex mb-12">
         <div class="w-full  font-body lg:flex lg:flex-wrap text-gray-700  bg-gray-100 border-t-8 border-b-8 border-gray-200 py-6">
 	      <p class="w-full lg:w-1/3 lg:flex lg:flex-shrink-0 items-center pr-3 mr-2 ml-auto font-display text-2xl text-blue-600 align-middle font-semibold text-center lg:text-right mb-5">
 			Helping Aquarian Web Studio build websites from scratch:</p>
