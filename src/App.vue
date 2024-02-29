@@ -18,8 +18,8 @@
         <PanelDivider elementId="cards" tailwindColor="bg-blue-300"></PanelDivider>
 
        <CardPanel></CardPanel>
-       <PanelDivider elementId="footer" tailwindColor="bg-blue-300"></PanelDivider>
-
+       <PanelDivider elementId="apipanel" tailwindColor="bg-blue-300"></PanelDivider>
+        <ApiPanel panelTitle="API Integrations"></ApiPanel>
       <DocumentFooter></DocumentFooter>
     </div>
 </template>
@@ -36,6 +36,7 @@ import TextPanel from './components/TextPanel.vue';
 import UIFormPanel from './components/UIFormPanel.vue';
 import ImagePanel from './components/ImagePanel.vue';
 import CardPanel from './components/CardPanel.vue'
+import ApiPanel from './components/ApiPanel.vue'
 import DocumentFooter from './components/DocumentFooter.vue'
 
 
@@ -52,6 +53,7 @@ export default{
         UIFormPanel,
         ImagePanel,
         CardPanel,
+        ApiPanel,
         DocumentFooter
         
     },

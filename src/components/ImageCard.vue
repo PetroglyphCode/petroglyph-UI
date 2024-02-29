@@ -1,6 +1,6 @@
 <template>
 <template v-if="cardUrl">
-    <a :href="cardUrl" class="border-0">
+    <a :href="cardUrl" class="border-0" target="_blank">
         <div class="card" :class="cardClass">
             <img class="" :src="cardImagePath" :alt="altText">
             <div class="px-6 py-4">
@@ -24,7 +24,7 @@
 			<p class=" " v-if="cardText">{{ cardText }}</p>
 		</div>
 		<footer class="px-6 py-2 flex flex-row flex-wrap">
-			<a v-for="hashtag in cardHashs" :href="hashtag.href" class=" bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2" :class="hashtag.class">
+			<a v-for="hashtag in cardHashs" :href="hashtag.href" class=" bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2" :class="hashtag.class" target="_blank">
                 
                <i ></i>{{ hashtag.text }}
             </a>
@@ -76,7 +76,7 @@ export default {
     background-repeat: no-repeat;
 }
 .card footer a.CTA, .card footer span.CTA {
-    align-self:flex-end
+    justify-self: end;
 }
 .card footer a.CTA i, .card footer span.CTA i {
     /* background-color:#fff;

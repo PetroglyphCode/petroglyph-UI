@@ -240,6 +240,7 @@ header nav .dropdown-box {
 p{
 	margin-top: .3em ;
 	margin-bottom: .7em ;
+    white-space: normal;
 }
 
 nav a{ @apply text-white font-semibold border-b-2 border-blue-900;}
