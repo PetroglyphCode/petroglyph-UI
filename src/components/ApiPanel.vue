@@ -5,17 +5,17 @@
 		</div>
 		<div class="w-full lg:w-5/6  font-body mb-12">
 			<div class="flex flex-col md:flex-row mb-8">
-				<div class="w-full flex flex-col md:flex-row flex-grab md:flex-wrap ml-auto mr-auto justify-around">
-                    <div class="w-3/4 md:w-1/2 lg:w-1/3 my-2 mr-auto ml-auto lg:m-0">
+				<div class="flex flex-col md:flex-row md:flex-wrap ">
+                  
                     <GithubUserCard username="PetroglyphCode"></GithubUserCard>
-                    </div>
-                    <div class="w-3/4 md:w-1/2 lg:w-1/3 my-2 mr-auto ml-auto lg:m-0">
+                    
+                  
                     <GithubRepoCard username="PetroglyphCode" reponame="petroglyph-UI"></GithubRepoCard>
-                    </div>
+                    
 				</div>
-				
-			</div>
-		</div>
+            </div>
+        </div>
+		
 	</div>
 </template>
 <script>

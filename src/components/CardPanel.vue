@@ -6,8 +6,9 @@
 		<div class="w-full lg:w-5/6  font-body mb-12">
 			<div class="flex flex-col md:flex-row mb-8">
 				<div class="flex flex-col md:flex-row flex-grab md:flex-wrap ml-auto mr-auto ">
-				<ImageCard 
-                    v-for="card in cards" 
+                <div v-for="card in cards" class="w-2/3 md:w-1/2">
+                    <ImageCard 
+                    
                     :key="card.cardTitle" 
                     :cardTitle="card.cardTitle"
                     :cardUrl="card.cardLink"
@@ -18,6 +19,7 @@
                     :cardClass="card.cardClass"
              >
                 </ImageCard>
+                </div>
 				</div>
 				
 			</div>
@@ -71,7 +73,7 @@ const cardData = [
     },{
         cardTitle:'Carte Sans Image',
         cardClass:'',
-        cardText :'Sometimes you just need to appropriately label some legible text and link to another place. Then again, sometimes there is just more to the story',
+        cardText :'Sometimes you just need to appropriately label some legible text and link to another place. Then again, sometimes there is just more to the story. These cards are not opinionated on size. Constraints happen on the div surrounding them.',
         cardAltText:'',
         cardLink:'https://www.aquarianwebdesign.com', //This is a test and should not engage because of the hash sub links. Make the component do this
         cardHashs:[

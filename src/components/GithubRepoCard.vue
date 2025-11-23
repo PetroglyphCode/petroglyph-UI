@@ -9,7 +9,7 @@
             </div>
 			<p class="inline-block max-w-s ">{{ repo.description }}</p>
                 <h5 class="font-semibold">Author</h5>
-                <a :href="repo.ownerUrl" class="border-0 color-gray-800">
+                <a :href="repo.ownerUrl" class="color-gray-800 border-0 text-blue-900">
                 <div class="flex flex-row shadow border border-gray-100 justify-start align-middle p-4">
                     <img :src="repo.ownerAvatar" :alt="repo.ownerlogin" class="flex w-8 h-8 border mr-3 border-gray-200"> 
                     <h3 class="flex inline-block align-middle font-semibold p-1">{{ repo.ownerlogin }}</h3>
@@ -52,11 +52,11 @@ export default {
         }
     },
     async created (){
-        console.log(this.reponame)
+        //console.log(this.reponame)
         const request= endpoint+'/'+this.username+'/'+this.reponame;
 
         const response =  axios.get(request).then((response) => {
-        console.log(response)
+       // console.log(response)
         this.repo = response.data
         const created = new Date(this.repo.created_at)
         this.repo.created_at= created.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})
@@ -94,13 +94,5 @@ i.user {
     background-repeat:no-repeat;
     width:1em;
     display:inline-block;
-}
-</style>
-<style scoped lang="postcss">
-a .card {
-    @apply font-normal text-gray-800 max-w-sm
-}
-.card a {
-    @apply border-0 text-gray-800
 }
 </style>

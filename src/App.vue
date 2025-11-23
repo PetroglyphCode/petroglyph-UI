@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../tailwind.config.js'
+
+//import tailwindConfig from '../tailwind.config.js'
 import TopNavigation from './components/TopNavigation.vue';
 import PanelDivider from './components/PanelDivider.vue';
 import IntroPanel from './components/IntroPanel.vue';
@@ -42,7 +42,7 @@ import ApiPanel from './components/ApiPanel.vue'
 import DocumentFooter from './components/DocumentFooter.vue'
 
 
-const fullConfig = resolveConfig(tailwindConfig)
+//const fullConfig = resolveConfig(tailwindConfig)
 
 export default{
     components:{

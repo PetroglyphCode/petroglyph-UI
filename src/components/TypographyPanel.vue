@@ -120,35 +120,21 @@
 		</table>
 	</div>
 	<div class='flex mb-4 ' >
-		<div class="w-2/3 mr-auto ml-auto flex flex-wrap">
-			<div class="w-1/2">
-				<h4 class="heading-s">Line Length</h4>
-				<p class='mb-4'>The number of characters per line influences readability. Studies indicate the following guidelines for English:</p>
+		<div class="w-5/6 mr-auto ml-auto flex flex-wrap">
+			<div class="w-full lg:w-3/4 ml-auto mr-auto">
+				<h4 class="heading-m">Line Length Demo</h4>
+				<p class='mb-4 optimal'>Paragraph size matters! The number of characters per line influences readability. Studies indicate the following guidelines for English:</p>
 				<h5 class='heading-xs text-blue-600'>Satisfactory</h5>
-				<p class='mb-4'>45-75 characters (desktop) or 35-40 characters (mobile) per line iswidely regarded as a satisfactory line length.</p>
+				<p class='mb-4 satisfactory'>45-75 characters (desktop) or 35-40 characters (mobile) per line is widely regarded as a satisfactory line length. This much text is enough to be legible. In short, (get it?) this paragraph has just enough length.</p>
 				<h5 class='heading-xs text-green-600'>Optimal</h5>
-				<p class='mb-4'>Around 66 characters (desktop) or 39 characters (mobile) is optimal.</p>
-					<h5 class='heading-xs text-red-600'>Too long</h5>
-					<p class='mb-4'>More than 90 characters (desktop) or 50 characters (mobile) is likely too long for continuous reading.</p>
+				<p class='mb-4 optimal'>Around 66 characters (desktop) or 39 characters (mobile) is optimal. Ideally this paragraph is a little wider than the one above and a little narrower than the one below.</p>
+				<h5 class='heading-xs text-red-600'>Too long</h5>
+				<p class='mb-4 toomuch'>More than 90 characters (desktop) or 50 characters (mobile) is likely too long for continuous reading. Check it out - we had to decrease text size to fit this particular count of characters on this view just to show you that squeezing them in isn't a great idea.</p>
 			</div>
-			<div class="w-1/2">
-				<p class="mt-10">Studies show that different aspects of reading performance such as comprehension, reading speed, method of movement, and eye movements are affected by changes in line length. </p>
-
-
-        <div id = 'linelength'>
-				<!-- SUPER COOL FEATURE HERE - VUE.JS pixel generated in-html graph
-				- 3 data graph
-				- Diff on mobile and desktop
-				mobile: 35, 39, 50
-				desktop: 45, 66 90,
-				- Data is a number of characters, bars are that length
-				Too Short, Satisfactory, Optimal, Too Long  DESKTOP .V. MOBILE
-				 -->
-				 </div>
-			</div>
-			<blockquote cite="https://www.aquarianwebdesign.com/blog/2023/wordpress-keeps-getting-hacked">
+			
+			<blockquote cite="https://www.aquarianwebdesign.com/blog/2023/wordpress-keeps-getting-hacked" class=" text-xl border-l-4 border-green-200 text-gray-600 p-6 my-6 ml-auto mr-auto">
 				<p>Most people like WordPress, but if your website outgrown it or it can no longer support your website, you're often told you're not a good enough developer. That's incorrect. It can also get very expensive and unsustainable. Don't take your website's success the wrong way. You just need something stronger.</p>
-				<footer>—Caroline C Blaker, <cite>Aquarian Web Studio</cite></footer>
+				<footer class="text-sm italic text-gray-500  mt-4 mb-2">—Caroline C Blaker, <cite>Aquarian Web Studio</cite></footer>
 			</blockquote>
 		</div>
 	</div>
@@ -163,5 +149,52 @@ export default{
     }
 }
 </script>
-<style scoped>
+<style >
+	p.toomuch {
+		width:50ch;
+		font-size:smaller
+	}
+	p.optimal{
+		width:39ch;
+	}
+	p.satisfactory {
+		width:35ch;
+	}
+	blockquote p{
+		width:39ch;
+	}
+	@media (min-width : 768px){
+		
+		p.toomuch{
+		width:70ch;
+		font-size:smaller;
+		}
+		p.optimal{
+			width:48ch;
+		}
+		p.satisfactory{
+			width:41ch;
+		}
+		blockquote p{
+			width:48ch;
+		}
+
+	}
+	@media (min-width :1024px){
+		
+		p.toomuch{
+		width:90ch;
+		font-size:smaller;
+		}
+		p.optimal{
+			width:66ch;
+		}
+		p.satisfactory{
+			width:50ch;
+		}
+		blockquote p{
+			width:66ch;
+		}
+
+	}
 </style>

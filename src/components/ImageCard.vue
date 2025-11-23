@@ -1,7 +1,7 @@
 <template>
 <template v-if="cardUrl">
     <a :href="cardUrl" class="border-0" target="_blank">
-        <div class="card" :class="cardClass">
+        <div class="card imageCard" :class="cardClass">
             <img class="" :src="cardImagePath" :alt="altText">
             <div class="px-6 py-4">
                 <h4 class="" v-if="cardTitle">{{cardTitle}}</h4>
@@ -86,34 +86,5 @@ export default {
 }
 </style>
 <style scoped lang="postcss">
-.card {
-	@apply max-w-sm rounded overflow-hidden shadow-lg m-4;
-}
-.card img {
-	@apply w-full;
-}
-.card h3 {
-	@apply text-orange-600 font-display text-2xl font-bold;
-}
-.card h4 {
-    @apply text-orange-500 font-display text-xl font-semibold;
-}
-.card p{
-	@apply text-gray-700 ;
-}
-.card.dark{
-	@apply text-white bg-gray-800;
-}
-.card.dark h3, .card.dark h4{
-    @apply text-orange-400
-}
-.card.dark p{
-	@apply text-white;
-}
-.card footer a, .card footer span {
-    @apply border-0 m-1
-}
-.card.dark h3 .card.dark h4 {
-	@apply text-orange-500;
-}
+
 </style>

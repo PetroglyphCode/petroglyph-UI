@@ -17,7 +17,13 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          postcss: [
+            require('autoprefixer'), // Example PostCSS plugin for .vue files
+            // ... other plugins specific to .vue styles
+          ]
+        }
       },
       {
       test: /\.js$/,
