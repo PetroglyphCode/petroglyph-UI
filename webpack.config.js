@@ -3,7 +3,6 @@ const { compile } = require('@vue/compiler-sfc');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
@@ -25,11 +24,6 @@ module.exports = {
           ]
         }
       },
-      {
-      test: /\.js$/,
-      loader: 'babel-loader',
-      include: [path.join(__dirname, 'src')],
-    },
 	    {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/resource',
@@ -84,11 +78,6 @@ module.exports = {
         }
        }
      ],
-  },
-  optimization: {
-    minimizer: [
-      new CssMinimizerPlugin(),
-    ]
   },
   plugins: [
     new HtmlWebpackPlugin({

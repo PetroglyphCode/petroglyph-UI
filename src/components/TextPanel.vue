@@ -50,7 +50,3 @@ p.compliant{max-width:50px; min-width:40px;}
 p.optimal{width: 65ch; max-width:90px; min-width:51px;}
 p.toobig{ min-width:91px;}
 </style>
-<style  lang="postcss">
-@tailwind utilities;
-
-</style>
